@@ -1,0 +1,10 @@
+.dropdown {
+  background-color: var(--neutral-700);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  gap: 0.5rem;
+}

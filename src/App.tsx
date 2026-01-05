@@ -1,5 +1,11 @@
+import { Header } from "./components/header.tsx";
+
 function App() {
-  return <>Hello World</>;
+  return (
+    <div className={"app"}>
+      <Header />
+    </div>
+  );
 }
 
 export default App;
