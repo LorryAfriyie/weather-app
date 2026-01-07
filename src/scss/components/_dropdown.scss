@@ -12,8 +12,8 @@
     gap: 0.5rem;
   }
 
-  &__option:focus {
-    background-color: purple;
+  &__option:hover {
+    color: purple;
   }
 
   &__menu {
