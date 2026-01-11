@@ -12,10 +12,6 @@
     gap: 0.5rem;
   }
 
-  &__option:hover {
-    color: purple;
-  }
-
   &__menu {
     background-color: var(--neutral-700);
     border-radius: 0.5rem;
@@ -33,8 +29,8 @@
     pointer-events: none;
   }
 
-   &__option:focus + &__menu {
-    //  Animation Styles
+   .open {
+    //  Animation Styless
     opacity: 1;
     transform: translateY(0);
 

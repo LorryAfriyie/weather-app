@@ -63,7 +63,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - SCSS
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - [Vite.js](https://vitejs.dev/) - Frontend Tooling
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**

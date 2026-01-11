@@ -1,30 +1,39 @@
 import { DropdownIcon, UnitIcon } from "./svg.tsx";
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 
-const Dropdown = () => (
-  <div className={"dropdown"}>
-    <DropdownOptionDisplay />
-    <DropdownMenu />
-  </div>
-);
+interface DropdownOptionProps {
+  open: boolean;
+}
 
-const DropdownOptionDisplay = () => {
-  const test = useRef<HTMLDivElement | null>(null);
-  useEffect(() => {
-    test.current?.addEventListener("click", () => alert("Hello"));
-  }, [test]);
+const Dropdown = () => {
+  // State boolean for dropdown menu
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to open/close the dropdown menu
+  function toggleDropdown() {
+    setIsOpen((current) => !current);
+  }
 
   return (
-    <div className={"dropdown__option"}>
+    <div className={"dropdown"} onClick={toggleDropdown}>
+      <DropdownOptionDisplay />
+      <DropdownMenu open={isOpen} />
+    </div>
+  );
+};
+
+const DropdownOptionDisplay = () => {
+  return (
+    <div className={`dropdown__option `}>
       <UnitIcon />
-      <p className={"wow"}>Units</p>
+      <p>Units</p>
       <DropdownIcon />
     </div>
   );
 };
 
-const DropdownMenu = () => (
-  <div className={"dropdown__menu"}>Dropdown Content</div>
+const DropdownMenu = ({ open }: DropdownOptionProps) => (
+  <div className={`dropdown__menu ${open && "open"}`}>Dropdown Content</div>
 );
 
 export default Dropdown;
