@@ -5,6 +5,10 @@ interface DropdownOptionProps {
   open: boolean;
 }
 
+interface DropdownOptionDisplayProps {
+  toggleDropdown: () => void;
+}
+
 const Dropdown = () => {
   // State boolean for dropdown menu
   const [isOpen, setIsOpen] = useState(false);
@@ -15,16 +19,18 @@ const Dropdown = () => {
   }
 
   return (
-    <div className={"dropdown"} onClick={toggleDropdown}>
-      <DropdownOptionDisplay />
+    <div className={"dropdown"}>
+      <DropdownOptionDisplay toggleDropdown={toggleDropdown} />
       <DropdownMenu open={isOpen} />
     </div>
   );
 };
 
-const DropdownOptionDisplay = () => {
+const DropdownOptionDisplay = ({
+  toggleDropdown,
+}: DropdownOptionDisplayProps) => {
   return (
-    <div className={`dropdown__option `}>
+    <div className={`dropdown__option`} onClick={toggleDropdown}>
       <UnitIcon />
       <p>Units</p>
       <DropdownIcon />
