@@ -38,4 +38,15 @@
   //  Set interaction with the dropdown menu
     pointer-events: auto;
   }
+
+  &__option-select {
+    .temperature, .wind-speed {
+      border-bottom: 1px solid white;
+
+    }
+
+    .temperature, .wind-speed, .precipitation {
+
+    }
+  }
 }

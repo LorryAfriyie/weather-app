@@ -39,7 +39,44 @@ const DropdownOptionDisplay = ({
 };
 
 const DropdownMenu = ({ open }: DropdownOptionProps) => (
-  <div className={`dropdown__menu ${open && "open"}`}>Dropdown Content</div>
+  <div className={`dropdown__menu ${open && "open"}`}>
+    <DropdownOptions />
+  </div>
 );
+
+const DropdownOptions = () => {
+  const temperatures = [{ type: "Celsius (C)" }, { type: "Fahrenheit (F)" }];
+
+  const windSpeed = [{ type: "km/h" }, { type: "mph" }];
+
+  const precipitation = [{ unit: "Millimeters (mm)" }, { unit: "Inches (in)" }];
+
+  return (
+    <div className={"dropdown__option-select"}>
+      <p>Switch to Imperial</p>
+
+      <div className="temperature">
+        <p>Temperature</p>
+        {temperatures.map((item, index) => (
+          <p key={index}>{item.type}</p>
+        ))}
+      </div>
+
+      <div className="wind-speed">
+        <p>Wind Speed</p>
+        {windSpeed.map((item, index) => (
+          <p key={index}>{item.type}</p>
+        ))}
+      </div>
+
+      <div className="precipitation">
+        <p>Precipitation</p>
+        {precipitation.map((item, index) => (
+          <p key={index}>{item.unit}</p>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Dropdown;
