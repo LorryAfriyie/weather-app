@@ -1,7 +1,7 @@
 const WeatherDashboard = () => {
   return (
     <section className="weather-dashboard">
-      <p>weather dashboard</p>
+      <h1>weather dashboard</h1>
     </section>
   );
 };

@@ -1,4 +1,5 @@
-// Bricolage_Grotesque
+/* Bricolage_Grotesque */
+//  Normal
 @font-face {
   font-family: "Bricolage_Grotesque";
   src: url("../../assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
@@ -6,7 +7,15 @@
   font-style: normal;
 }
 
-// DM_Sans
+// Bold
+@font-face {
+  font-family: "Bricolage_Grotesque";
+  src: url("../../assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* DM_Sans */
 //  Normal
 @font-face {
   font-family: "DM_Sans";

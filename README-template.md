@@ -76,9 +76,15 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
+- Include font files into scss file to use throughout the project without needing to import a link from a cdn for fonts.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@font-face {
+  font-family: "Bricolage_Grotesque";
+  src: url("../../assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 ```
 ```js

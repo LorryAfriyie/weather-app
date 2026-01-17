@@ -1,4 +1,9 @@
 .weather-dashboard {
   display: grid;
   place-content: center;
+  color: var(--neutral-0);
+
+  h1 {
+    font-size: 3rem;
+  }
 }
