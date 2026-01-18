@@ -13,7 +13,7 @@
   }
 
   &__menu {
-    background-color: var(--neutral-700);
+    background-color: var(--neutral-800);
     border-radius: 0.5rem;
     padding: 0.75rem;
     position: absolute;
@@ -41,7 +41,7 @@
 
   &__option-select {
     .temperature, .wind-speed {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid var(--neutral-600);
 
     }
 
@@ -51,10 +51,18 @@
       }
 
       a:hover {
-        color: pink;
         border-radius: 0.25rem;
-        background: red;
+        background: var(--neutral-600);
+      }
+
+      a:focus {
+        background: pink;
       }
     }
+  }
+
+
+  &__section-title {
+    color: var(--neutral-300);
   }
 }

@@ -56,21 +56,21 @@ const DropdownOptions = () => {
       <p>Switch to Imperial</p>
 
       <div className="temperature">
-        <p>Temperature</p>
+        <p className={"dropdown__section-title"}>Temperature</p>
         {temperatures.map((item, index) => (
           <a key={index}>{item.type}</a>
         ))}
       </div>
 
       <div className="wind-speed">
-        <p>Wind Speed</p>
+        <p className={"dropdown__section-title"}>Wind Speed</p>
         {windSpeed.map((item, index) => (
           <a key={index}>{item.type}</a>
         ))}
       </div>
 
       <div className="precipitation">
-        <p>Precipitation</p>
+        <p className={"dropdown__section-title"}>Precipitation</p>
         {precipitation.map((item, index) => (
           <a key={index}>{item.unit}</a>
         ))}
