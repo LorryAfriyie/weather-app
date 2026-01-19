@@ -45,11 +45,20 @@ const DropdownMenu = ({ open }: DropdownOptionProps) => (
 );
 
 const DropdownOptions = () => {
-  const temperatures = [{ type: "Celsius (C)" }, { type: "Fahrenheit (F)" }];
+  const temperatures = [
+    { type: "Celsius (C)", id: "celsius", name: "temperature" },
+    { type: "Fahrenheit (F)", id: "fahrenheit", name: "temperature" },
+  ];
 
-  const windSpeed = [{ type: "km/h" }, { type: "mph" }];
+  const windSpeed = [
+    { type: "km/h", id: "kilometers", name: "speed" },
+    { type: "mph", id: "miles", name: "speed" },
+  ];
 
-  const precipitation = [{ unit: "Millimeters (mm)" }, { unit: "Inches (in)" }];
+  const precipitation = [
+    { unit: "Millimeters (mm)", id: "millimeters", name: "precipitation" },
+    { unit: "Inches (in)", id: "inches", name: "precipitation" },
+  ];
 
   return (
     <div className={"dropdown__option-select"}>
@@ -57,22 +66,32 @@ const DropdownOptions = () => {
 
       <div className="temperature">
         <p className={"dropdown__section-title"}>Temperature</p>
+
         {temperatures.map((item, index) => (
-          <a key={index}>{item.type}</a>
+          <div className="form-control" key={index}>
+            <label htmlFor={item.id}>{item.type}</label>
+            <input type="radio" name={item.name} id={item.id} />
+          </div>
         ))}
       </div>
 
       <div className="wind-speed">
         <p className={"dropdown__section-title"}>Wind Speed</p>
         {windSpeed.map((item, index) => (
-          <a key={index}>{item.type}</a>
+          <div className="form-control" key={index}>
+            <label htmlFor={item.id}>{item.type}</label>
+            <input type="radio" name={item.name} id={item.id} />
+          </div>
         ))}
       </div>
 
       <div className="precipitation">
         <p className={"dropdown__section-title"}>Precipitation</p>
         {precipitation.map((item, index) => (
-          <a key={index}>{item.unit}</a>
+          <div className="form-control" key={index}>
+            <label htmlFor={item.id}>{item.unit}</label>
+            <input type="radio" name={item.name} id={item.id} />
+          </div>
         ))}
       </div>
     </div>

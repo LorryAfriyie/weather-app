@@ -45,6 +45,17 @@
 
     }
 
+    .form-control {
+      display:flex;
+      justify-content: space-between;
+    }
+
+    .form-control:hover {
+      cursor: pointer;
+      border-radius: 0.25rem;
+      background: var(--neutral-600);
+    }
+
     .temperature, .wind-speed, .precipitation {
       a {
         display: block;
