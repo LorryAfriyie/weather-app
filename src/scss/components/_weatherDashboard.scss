@@ -6,4 +6,36 @@
   h1 {
     font-size: 3rem;
   }
+
+  .input-container {
+    //  Container styles
+    display:grid;
+    place-content: center;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1rem;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+
+    //  Input text styles
+    .search-input {
+      outline: none;
+      box-shadow: none;
+      border: 0;
+      border-radius: 7px;
+      width: 100%;
+      background-color: var(--neutral-700);
+      color: var(--neutral-0);
+    }
+
+    .search-btn {
+      outline: none;
+      box-shadow: none;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 7px;
+      background-color: var(--blue-500);
+      color: var(--neutral-0);
+    }
+
+  }
 }
