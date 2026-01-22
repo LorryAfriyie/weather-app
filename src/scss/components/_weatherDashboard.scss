@@ -9,30 +9,44 @@
 
   .input-container {
     //  Container styles
-    display:grid;
+    /*display:grid;
     place-content: center;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(2, max-content);*/
+    position: relative;
+    display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-block-start: 2rem;
     margin-block-end: 1rem;
+
+    //  SVG styles
+    svg {
+      position: absolute;
+      left: 19%;
+      right: auto;
+      top: 25%;
+    }
 
     //  Input text styles
     .search-input {
       outline: none;
       box-shadow: none;
       border: 0;
-      border-radius: 7px;
-      width: 100%;
+      border-radius: 10px;
+      padding: .75rem;
+      width: 50%;
       background-color: var(--neutral-700);
       color: var(--neutral-0);
     }
 
+    //  Button styles
     .search-btn {
       outline: none;
       box-shadow: none;
       padding: 0.5rem;
       border: 0;
-      border-radius: 7px;
+      border-radius: 10px;
+      width: 13%;
       background-color: var(--blue-500);
       color: var(--neutral-0);
     }

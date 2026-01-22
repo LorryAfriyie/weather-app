@@ -46,8 +46,31 @@
     }
 
     .form-control {
-      display:flex;
-      justify-content: space-between;
+      label {
+        display:flex;
+        justify-content: space-between;
+
+        input[type='radio'] {
+          display: none;
+        }
+
+        .checkmark {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-image:url("/icon-checkmark.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+
+        input[type='radio'] + .checkmark{
+          cursor: pointer;
+        }
+
+        input[type='radio']:checked + .checkmark {
+          outline: 2px solid pink;
+        }
+      }
     }
 
     .form-control:hover {

@@ -1,4 +1,4 @@
-import { DropdownIcon, UnitIcon } from "./svg.tsx";
+import { DropdownIcon, UnitIcon, CheckmarkIcon } from "./svg.tsx";
 import { useState } from "react";
 
 interface DropdownOptionProps {
@@ -69,8 +69,11 @@ const DropdownOptions = () => {
 
         {temperatures.map((item, index) => (
           <div className="form-control" key={index}>
-            <label htmlFor={item.id}>{item.type}</label>
-            <input type="radio" name={item.name} id={item.id} />
+            <label htmlFor={item.id}>
+              {item.type}
+              <input type="radio" name={item.name} id={item.id} />
+              <span className="checkmark"></span>
+            </label>
           </div>
         ))}
       </div>
@@ -79,8 +82,11 @@ const DropdownOptions = () => {
         <p className={"dropdown__section-title"}>Wind Speed</p>
         {windSpeed.map((item, index) => (
           <div className="form-control" key={index}>
-            <label htmlFor={item.id}>{item.type}</label>
-            <input type="radio" name={item.name} id={item.id} />
+            <label htmlFor={item.id}>
+              {item.type}
+              <input type="radio" name={item.name} id={item.id} />
+              <span className="checkmark"></span>
+            </label>
           </div>
         ))}
       </div>
@@ -89,8 +95,11 @@ const DropdownOptions = () => {
         <p className={"dropdown__section-title"}>Precipitation</p>
         {precipitation.map((item, index) => (
           <div className="form-control" key={index}>
-            <label htmlFor={item.id}>{item.unit}</label>
-            <input type="radio" name={item.name} id={item.id} />
+            <label htmlFor={item.id}>
+              {item.unit}
+              <input type="radio" name={item.name} id={item.id} />
+              <span className="checkmark"></span>
+            </label>
           </div>
         ))}
       </div>
