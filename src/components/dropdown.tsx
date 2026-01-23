@@ -1,4 +1,4 @@
-import { DropdownIcon, UnitIcon, CheckmarkIcon } from "./svg.tsx";
+import { DropdownIcon, UnitIcon } from "./svg.tsx";
 import { useState } from "react";
 
 interface DropdownOptionProps {

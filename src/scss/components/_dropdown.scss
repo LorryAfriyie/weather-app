@@ -5,7 +5,6 @@
     background-color: var(--neutral-700);
     display: flex;
     align-items: center;
-    //width: max-content;
     padding: 0.75rem;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -40,12 +39,13 @@
   }
 
   &__option-select {
+
     .temperature, .wind-speed {
       border-bottom: 1px solid var(--neutral-600);
-
     }
 
     .form-control {
+      padding-block: .25rem;
       label {
         display:flex;
         justify-content: space-between;
@@ -55,12 +55,12 @@
         }
 
         .checkmark {
-          display: inline-block;
-          width: 20px;
-          height: 20px;
-          background-image:url("/icon-checkmark.svg");
+          display: block;
+          width: 15px;
+          height: 15px;
           background-repeat: no-repeat;
-          background-size: contain;
+          background-size: cover;
+          background-position: center;
         }
 
         input[type='radio'] + .checkmark{
@@ -68,7 +68,7 @@
         }
 
         input[type='radio']:checked + .checkmark {
-          outline: 2px solid pink;
+          background-image: url("/images/icon-checkmark.svg");
         }
       }
     }
@@ -95,8 +95,9 @@
     }
   }
 
-
   &__section-title {
     color: var(--neutral-300);
+    font-size: small;
+    padding-block: .25rem;
   }
 }
