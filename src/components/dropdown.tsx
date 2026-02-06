@@ -46,9 +46,9 @@ const DropdownMenu = ({ open }: DropdownOptionProps) => (
 
 const DropdownOptions = () => {
   const [options, setOptions] = useState({
-    temperature: "",
-    speed: "",
-    precipitation: "",
+    temperature: "celsius",
+    speed: "km/h",
+    precipitation: "mm",
   });
 
   const handleWindSpeed = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,7 +57,7 @@ const DropdownOptions = () => {
     setOptions((options) => ({ ...options, [name]: value }));
   };
 
-  const handleTemperture = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleTemperature = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setOptions((options) => ({ ...options, [name]: value }));
@@ -75,7 +75,6 @@ const DropdownOptions = () => {
       id: "celsius",
       name: "temperature",
       value: "celsius",
-      checked: true,
     },
     {
       type: "Fahrenheit (F)",
@@ -91,7 +90,6 @@ const DropdownOptions = () => {
       id: "kilometers",
       value: "km/h",
       name: "speed",
-      checked: true,
     },
     { type: "mph", id: "miles", value: "mph", name: "speed" },
   ];
@@ -102,7 +100,6 @@ const DropdownOptions = () => {
       id: "millimeters",
       value: "mm",
       name: "precipitation",
-      checked: true,
     },
     { unit: "Inches (in)", id: "inches", value: "in", name: "precipitation" },
   ];
@@ -127,7 +124,8 @@ const DropdownOptions = () => {
                 name={item.name}
                 id={item.id}
                 value={item.value}
-                onChange={handleTemperture}
+                onChange={handleTemperature}
+                checked={options.temperature === item.value}
               />
               <span className="checkmark"></span>
             </label>
@@ -147,6 +145,7 @@ const DropdownOptions = () => {
                 id={item.id}
                 value={item.value}
                 onChange={handleWindSpeed}
+                checked={options.speed === item.value}
               />
               <span className="checkmark"></span>
             </label>
@@ -166,6 +165,7 @@ const DropdownOptions = () => {
                 id={item.id}
                 value={item.value}
                 onChange={handlePrecipitation}
+                checked={options.precipitation === item.value}
               />
               <span className="checkmark"></span>
             </label>
