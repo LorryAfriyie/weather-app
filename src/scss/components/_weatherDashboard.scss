@@ -9,23 +9,11 @@
 
   .input-container {
     //  Container styles
-    /*display:grid;
-    place-content: center;
-    grid-template-columns: repeat(2, max-content);*/
-    position: relative;
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-block-start: 2rem;
     margin-block-end: 1rem;
-
-    //  SVG styles
-    svg {
-      position: absolute;
-      left: 19%;
-      right: auto;
-      top: 25%;
-    }
 
     //  Input text styles
     .search-input {

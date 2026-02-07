@@ -1,12 +1,33 @@
-import { SearchIcon } from "./svg.tsx";
+import axios from "axios";
+import { useEffect } from "react";
 
 const WeatherDashboard = () => {
+  useEffect(() => {
+    async function example() {
+      try {
+        await axios
+          .get(
+            "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true",
+          )
+          .then((res) => {
+            console.log(res);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+          .finally();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    example();
+  }, []);
   return (
     <section className="weather-dashboard">
       <h1>How's the sky looking today?</h1>
 
       <div className="input-container">
-        <SearchIcon />
         <input
           type="text"
           className="search-input"
