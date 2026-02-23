@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
+import {SearchIcon} from "./svg.tsx";
 
 const WeatherDashboard = () => {
   useEffect(() => {
@@ -28,13 +29,17 @@ const WeatherDashboard = () => {
       <h1>How's the sky looking today?</h1>
 
       <div className="input-container">
-        <input
-          type="text"
-          className="search-input"
-          id={"search-input"}
-          name={"search-input"}
-          placeholder={"Search for a place..."}
-        />
+        <div className="search-container">
+          <SearchIcon/>
+          <input
+              type="text"
+              className="search-input"
+              id={"search-input"}
+              name={"search-input"}
+              placeholder={"Search for a place..."}
+          />
+        </div>
+
         <button className={"search-btn"} id={"search-btn"} name={"search-btn"}>
           Search
         </button>
