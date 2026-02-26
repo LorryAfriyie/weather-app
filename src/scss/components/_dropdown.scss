@@ -5,7 +5,7 @@
     background-color: var(--neutral-700);
     display: flex;
     align-items: center;
-    padding: 0.75rem;
+    padding: 0.65rem;
     border-radius: 0.5rem;
     cursor: pointer;
     gap: 0.5rem;
@@ -31,27 +31,29 @@
     pointer-events: none;
   }
 
-   .open {
+  .open {
     //  Animation Styless
     opacity: 1;
     transform: translateY(0);
 
-  //  Set interaction with the dropdown menu
+    //  Set interaction with the dropdown menu
     pointer-events: auto;
   }
 
   &__option-select {
-  .switch-text {
-    margin-block-end: .75rem;
-  }
+    .switch-text {
+      margin-block-end: .75rem;
+    }
+
     .temperature, .wind-speed {
       border-bottom: 1px solid var(--neutral-600);
     }
 
     .form-control {
       padding-block: .25rem;
+
       label {
-        display:flex;
+        display: flex;
         justify-content: space-between;
 
         input[type='radio'] {
@@ -67,7 +69,7 @@
           background-position: center;
         }
 
-        input[type='radio'] + .checkmark{
+        input[type='radio'] + .checkmark {
           cursor: pointer;
         }
 
