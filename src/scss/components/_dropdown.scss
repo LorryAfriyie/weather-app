@@ -9,6 +9,13 @@
     border-radius: 0.5rem;
     cursor: pointer;
     gap: 0.5rem;
+    outline: none;
+    border: none;
+    color: var(--neutral-200);
+
+    &:focus {
+      border: 2px solid var(--neutral-200);
+    }
   }
 
   &__menu {

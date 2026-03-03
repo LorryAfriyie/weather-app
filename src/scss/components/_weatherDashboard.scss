@@ -13,7 +13,7 @@
     //  Container styles
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: .5rem;
     margin-block-start: 2rem;
     margin-block-end: 1rem;
     flex-direction: column;
@@ -43,6 +43,11 @@
         width: 100%;
         background-color: var(--neutral-700);
         color: var(--neutral-0);
+
+        &:focus {
+          border: 2px solid var(--neutral-200);
+          background-color: var(--neutral-800);
+        }
       }
 
       @media(min-width: 40em) {
@@ -60,6 +65,14 @@
 
       background-color: var(--blue-500);
       color: var(--neutral-0);
+
+      &:hover {
+        background-color: var(--blue-700);
+      }
+
+      &:focus {
+        border: 2px solid pink;
+      }
 
       @media(min-width: 40em) {
         width: 13%;

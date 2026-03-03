@@ -30,11 +30,11 @@ const DropdownOptionDisplay = ({
   toggleDropdown,
 }: DropdownOptionDisplayProps) => {
   return (
-    <div className={`dropdown__option`} onClick={toggleDropdown}>
+    <button className={`dropdown__option`} onClick={toggleDropdown}>
       <UnitIcon />
       <p>Units</p>
       <DropdownIcon />
-    </div>
+    </button>
   );
 };
 
