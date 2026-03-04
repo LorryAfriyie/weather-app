@@ -110,7 +110,7 @@ const DropdownOptions = () => {
 
   return (
     <div className={"dropdown__option-select"}>
-      <p className={"switch-text"}>Switch to Imperial</p>
+      <button className={"switch-metric"}>Switch to Imperial</button>
 
       <div className="temperature">
         <p className={"dropdown__section-title"}>Temperature</p>

@@ -14,7 +14,7 @@
     color: var(--neutral-200);
 
     &:focus {
-      border: 2px solid var(--neutral-200);
+      outline: 2px solid var(--neutral-200);
     }
   }
 
@@ -48,7 +48,7 @@
   }
 
   &__option-select {
-    .switch-text {
+    .switch-metric {
       margin-block-end: .75rem;
     }
 
