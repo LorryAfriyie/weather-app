@@ -48,8 +48,25 @@
   }
 
   &__option-select {
+
     .switch-metric {
+      background: none;
+      border-radius: 0.25rem;
+      width: 100%;
+      padding: .35rem;
+      border: none;
+      color: var(--neutral-100);
       margin-block-end: .75rem;
+      text-align: start;
+
+      &:hover {
+        background: var(--neutral-700);
+      }
+
+      &:focus {
+        outline: 1px solid var(--neutral-200);
+        outline-offset: 4px;
+      }
     }
 
     .temperature, .wind-speed {
