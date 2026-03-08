@@ -1,4 +1,24 @@
 .connection-container {
   color: var(--neutral-200);
   text-align: center;
+
+  .connection-error-header {
+    margin-block-end: 1rem;
+
+    @media (min-width: 60em) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .connection-error-text {
+    margin-block-end: 1rem;
+  }
+
+  .retry-btn {
+    padding-block: .25rem;
+    padding-inline: 1.25rem;
+    border: none;
+    background: var(--neutral-700);
+    border-radius: var(--border-radius);
+  }
 }

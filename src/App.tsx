@@ -1,5 +1,5 @@
 import { Header } from "./components/header.tsx";
-import { ErrorIcon } from "./components/svg.tsx";
+import { ErrorIcon, RetryIcon } from "./components/svg.tsx";
 import WeatherDashboard from "./components/weatherDashboard";
 
 function App() {
@@ -16,13 +16,18 @@ function NoConnectionMsg() {
   return (
     <div className={"connection-container"}>
       <ErrorIcon />
-      <h2>Something went wrong</h2>
-      <p>
+
+      <h2 className={"connection-error-header"}>Something went wrong</h2>
+
+      <p className={"secondary-font-color connection-error-text"}>
         We couldn't connect to the server (API error). Please try again in a few
         moments.
       </p>
 
-      <button>Retry</button>
+      <button className={"retry-btn"}>
+        <RetryIcon />
+        Retry
+      </button>
     </div>
   );
 }
