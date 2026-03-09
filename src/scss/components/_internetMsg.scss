@@ -15,10 +15,17 @@
   }
 
   .retry-btn {
-    padding-block: .25rem;
-    padding-inline: 1.25rem;
+    padding-block: .5rem;
+    padding-inline: .75rem;
     border: none;
     background: var(--neutral-700);
     border-radius: var(--border-radius);
+    color: white;
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
 }

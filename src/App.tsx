@@ -25,8 +25,10 @@ function NoConnectionMsg() {
       </p>
 
       <button className={"retry-btn"}>
-        <RetryIcon />
-        Retry
+        <span className="btn-content">
+          <RetryIcon />
+          <p>Retry</p>
+        </span>
       </button>
     </div>
   );
