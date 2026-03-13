@@ -69,6 +69,10 @@ const DropdownOptions = () => {
     setOptions((options) => ({ ...options, [name]: value }));
   };
 
+  const handleMetricChange = () => {
+    console.log("button has been clicked!");
+  };
+
   const temperatures = [
     {
       type: "Celsius (C)",
@@ -110,7 +114,9 @@ const DropdownOptions = () => {
 
   return (
     <div className={"dropdown__option-select"}>
-      <button className={"switch-metric"}>Switch to Imperial</button>
+      <button className={"switch-metric"} onClick={handleMetricChange}>
+        Switch to Imperial
+      </button>
 
       <div className="temperature">
         <p className={"dropdown__section-title"}>Temperature</p>
