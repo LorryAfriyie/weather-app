@@ -5,7 +5,7 @@
     background-color: var(--neutral-700);
     display: flex;
     align-items: center;
-    padding: 0.65rem;
+    padding: 0.5rem;
     border-radius: 0.5rem;
     cursor: pointer;
     gap: 0.5rem;
@@ -22,12 +22,12 @@
     background-color: var(--neutral-800);
     border: 1px solid var(--neutral-600);
     border-radius: 0.5rem;
-    padding-block: .75rem;
-    padding-inline: .5rem;
+    padding-block: .35rem;
+    padding-inline: .35rem;
     position: absolute;
     right: 0;
     top: calc(100% + .5rem);
-    min-width: 220px;
+    min-width: 200px;
 
     //  Animation Styles
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
@@ -53,7 +53,8 @@
       background: none;
       border-radius: 0.25rem;
       width: 100%;
-      padding-block: .35rem;
+      padding-block: .5rem;
+      padding-inline: .35rem;
       border: none;
       color: var(--neutral-100);
       margin-block-end: .25rem;
@@ -75,10 +76,13 @@
 
     .form-control {
       padding-block: .25rem;
+      padding-inline: .25rem;
 
       label {
         display: flex;
         justify-content: space-between;
+        font-size: 16px;
+        padding-block: .25rem;
 
         input[type='radio'] {
           display: none;
@@ -129,5 +133,6 @@
     color: var(--neutral-300);
     font-size: small;
     padding-block: .25rem;
+    padding-inline: .35rem;
   }
 }

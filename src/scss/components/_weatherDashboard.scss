@@ -28,10 +28,9 @@
 
       svg {
         position: absolute;
-        top: 0;
-        left: .75rem;
+        inset: 0 0 0 .75rem;
         height: 100%;
-        width: 15px;
+        width: 18px;
       }
 
       //  Input text styles
